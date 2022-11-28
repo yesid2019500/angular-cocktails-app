@@ -1,0 +1,25 @@
+
+  <table class="table table-hover bg" >
+    <thead>
+        <tr>
+            <th># </th>
+            <th>
+               Picture
+            </th>
+            <th>Name </th>
+            <th>More</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cocktail of cocktails.drinks; let i = index "  >
+            <td> {{ 1 + i }} </td>
+            <td>
+                <img [src]="cocktail.strDrinkThumb" class="small-flag" alt="">
+            </td>
+            <td> {{cocktail.strDrink }}</td>
+            <td>
+                <a class="nav-link" [routerLink]="['/cocktail/', cocktail.idDrink ]"  >Show more...</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

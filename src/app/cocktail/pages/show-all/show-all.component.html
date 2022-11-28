@@ -1,0 +1,49 @@
+ 
+ <div *ngIf="!cocktail; else divcocktail" class="alert alert-info">
+    Wait please...
+</div>
+
+
+  <ng-template #divcocktail >  
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="text" >{{ cocktail.strDrink }}</h2>
+            <img class="img" [src]="cocktail.strDrinkThumb" alt="">
+        </div>
+        <div class="col-md-4">
+            <h3 class="title" >Informacion</h3>
+                <ul class="list-group">
+                    <li class="list-group-item bg">
+                       <strong>Ingredients :</strong>  {{ cocktail.strIngredient1}}
+                     </li>
+
+                     <li class="list-group-item bg">
+                        <strong>Ingredients :</strong>  {{ cocktail.strIngredient2}}
+                      </li>
+                      <li class="list-group-item bg">
+                        <strong>Ingredients :</strong>  {{ cocktail.strIngredient3}}
+                      </li>
+                      <li class="list-group-item bg">
+                        <strong>Ingredients :</strong>  {{ cocktail.strIngredient4}}
+                      </li>
+                </ul>
+               <div class="container mt-4">
+                <h3 class="title" >Instructions</h3>
+                <p class=" parrafo bg"> {{ cocktail.strInstructions}} </p>
+               </div>
+        </div>
+    </div>
+
+   
+
+ </ng-template> 
+
+
+<!-- 
+<div class="row">
+    <div >
+        {{ cocktail.strDrink }}
+    </div>
+</div> -->
+
+

@@ -1,0 +1,22 @@
+
+.container-sidebar {
+    color:#fff;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.title {
+    width: 100%;
+    font-size: 2.5rem;
+}
+
+.container-sidebar ul {
+    background:orange;
+    margin: 0;
+    padding: 0;
+}
+
+
+li {
+    cursor:pointer;
+}

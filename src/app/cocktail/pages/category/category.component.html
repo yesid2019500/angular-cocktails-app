@@ -1,0 +1,56 @@
+<div class="container-category">
+    <h2 class="title-one" > Search by ingredents</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <!-- receive emit to get funcionality input all-cocktail -->
+        <app-cocktail-input (onEnter)="search( $event )" 
+            placeholder="Search by ingredents"
+        >
+
+        </app-cocktail-input>
+    </div>
+</div>
+<hr>
+
+<div 
+class="alert alert-danger" 
+*ngIf="thereError"  
+ >
+    Not exits this {{terms}}
+</div>
+
+<div *ngIf="!thereError" class="row">
+    <div class="col">
+       
+
+        <table class="table table-hover" >
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>
+                       Name
+                    </th>
+                    <th>Description ingredent </th>
+                    <th>Alcohol</th>
+                </tr>
+            </thead>
+            <tbody  >
+                <tr  *ngFor="let cocktail of cocktails.drinks ; let i = index "  >
+                    <td class="text" > {{ 1 + i }} </td>
+                    <td class="text" >
+                         {{ cocktail.strDrink }} 
+                    </td>
+                    <td class="text" > 
+                        <img class="img-mediun" [src]="cocktail.strDrinkThumb" alt="cocktail.strDrinkThumb">
+                    </td>
+                   
+                </tr>
+            </tbody>
+        </table>
+        
+
+    </div>
+</div>
+</div>
+

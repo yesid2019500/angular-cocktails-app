@@ -1,0 +1,16 @@
+.small-flag {
+    width: 50px;
+}
+
+.bg {
+    background: black;
+    color:#fff;
+    border-radius: 10px;
+}
+
+tbody {
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  max-height: 500px;
+}

@@ -1,0 +1,43 @@
+<h2 class="title">Search your cocktail by name</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <!-- receive emit to get funcionality input all-cocktail -->
+        <app-cocktail-input (onEnter)="search( $event )" (onDebounce)="suggestion($event)"
+             placeholder="Searh cocktail by name..."  
+        >   
+        </app-cocktail-input>
+    </div>
+</div>
+
+<!-- box suggestions -->
+    <ul class="list-group" *ngIf="showSuggest === true" >
+        <li  *ngFor="let suggest of cocktailsSuggestion.drinks" class="list-group-item list-group-item-action">
+          <a class="nav-link" [routerLink]="['/cocktail/', suggest.idDrink ]"  >
+            {{ suggest.strDrink }}
+          </a>
+        </li>
+
+        <li class="list-group-item list-group-item-action"
+            (click)=" searchSuggest( terms )"
+            >
+            <a class="nav-link"  >
+             Search  {{ terms }}
+            </a>
+          </li>
+    </ul>
+
+<hr>
+
+<div 
+class="alert alert-danger" 
+*ngIf="thereError"  
+ >
+    Not exits this {{terms}}
+</div>
+
+<div *ngIf="!thereError" class="row">
+    <div class="col">
+        <app-cocktail-table [cocktails]="cocktails" ></app-cocktail-table>
+    </div>
+</div>

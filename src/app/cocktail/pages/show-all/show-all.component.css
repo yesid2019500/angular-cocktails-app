@@ -1,0 +1,33 @@
+
+.img {
+    width: 350px;
+    border-radius: 50%;
+    border: 5px solid orange;
+    transition: ease all 0.5s;
+    cursor: pointer;
+}
+
+.img:hover {
+    transform: scale(1.1);
+}
+
+.text {
+    margin: 30px auto;
+    text-align: center;
+    width: 80%;
+    color:orange;
+}
+.bg {
+    color: #fff;
+    background:rgba(0, 0, 0, 0.404);
+}
+.parrafo {
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.title {
+    color: orange;
+    font-size: 2rem;
+}
+

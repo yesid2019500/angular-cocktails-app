@@ -1,0 +1,45 @@
+
+.img-mediun {
+    width: 150px;
+    border-radius: 50%;
+    border: solid 2px  blue;
+}
+
+.title-one {
+    color: #fff;
+}
+
+.text {
+    color:orange;
+}
+
+td {
+    cursor:pointer;
+    background: rgba(0, 0, 0, 0.52);
+    border-radius: 10px;
+    color: rgb(255, 149, 0);
+}
+td:hover {
+    color:orange !important;
+}
+th:hover {
+    color:orange !important;
+}
+th {
+    color: #fff;
+    
+}
+
+.container-category {
+  flex-wrap: wrap;
+  height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    overflow: scroll;
+    flex-wrap: wrap;
+  }

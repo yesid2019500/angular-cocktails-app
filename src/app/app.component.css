@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg {
+    background: url('https://media.istockphoto.com/id/1323890695/es/foto/el-c%C3%B3ctel-de-pomelo-rosado-y-ginebra-de-romero-se-sirve-en-vasos-de-ginebra-preparados.jpg?s=612x612&w=0&k=20&c=WogCkZWIybSjc4N4WF9MtImBSIewlSFbQvJvVRyhoPA=');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
+    position: absolute;
+}
+
+.bg::before {
+    position: absolute;
+    content: '';
+    width: 1000;
+    background:green;
+}
+
+.small-flag {
+    width: 50px;
+}
